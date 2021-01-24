@@ -1,5 +1,5 @@
 {
-  "name": "weather-typescript",
+  "name": "weather-lookup",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
