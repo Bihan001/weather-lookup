@@ -1,0 +1,26 @@
+{
+  "short_name": "Weather Lookup",
+  "name": "Weather Lookup",
+  "icons": [
+    {
+      "src": "weather_128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "weather_256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "weather_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#dae5ee",
+  "background_color": "#e5ecf1"
+}

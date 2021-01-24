@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  background-color: #ebecf0;
+}
+
+body,
+p,
+input[type=text],
+input[type=password],
+input[type=checkbox],
+select,
+textarea,
+button {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+}
+
+div,
+p,
+span {
+  color: #61677c;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+body {
+  min-width: fit-content;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 5rem auto 5rem;
+  grid-template-rows: 5rem auto;
+  grid-template-areas: "left-margin header right-margin" "left-margin content right-margin";
+}
+.container .header {
+  grid-area: header;
+  text-align: center;
+  margin: auto;
+}
+.container .content {
+  grid-area: content;
+}
+
+.bordered {
+  border: 1px solid #fff;
+}
+
+form {
+  padding: 16px;
+  margin: 0 auto;
+}
+
+.segment {
+  box-sizing: border-box;
+  padding: 32px 8px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+button,
+input[type=text],
+input[type=password] {
+  border: 0;
+  outline: 0;
+  vertical-align: text-bottom;
+  border-radius: 320px;
+  padding: 16px;
+  color: #61677c -faded;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+}
+button .material-icons,
+input[type=text] .material-icons,
+input[type=password] .material-icons {
+  font-size: inherit;
+}
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  margin-right: 8px;
+  box-sizing: border-box;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+}
+input[type=text]:focus,
+input[type=password]:focus {
+  color: #61677c;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+button {
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover {
+  color: #61677c;
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+button:active {
+  color: #61677c;
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+button .material-icons {
+  margin-right: 8px;
+}
+button.unit {
+  border-radius: 8px;
+  line-height: 0;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+  font-size: 19.2px;
+}
+button.unit .material-icons {
+  margin-right: 0;
+}
+button.red {
+  display: block;
+  width: 100%;
+  color: #ae1100;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 24px;
+}
+.input-group > .input {
+  margin-bottom: 0;
+}
+.input-group label {
+  margin: 0;
+  flex: 1;
+}
+
+.input {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 16px;
+  position: relative;
+}
+.input.switch {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.input.switch .switch-title {
+  text-align: left;
+  padding-right: 16px;
+  padding-bottom: 16px;
+}
+.input.switch > label {
+  display: inline-grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas: "notchecked switch checked";
+  min-height: 32px;
+  justify-items: flex-start;
+  align-items: center;
+  position: relative;
+  overflow-x: auto;
+  width: auto;
+  padding-bottom: 16px;
+}
+.input.switch > label .switch-label-unchecked {
+  grid-area: notchecked;
+  margin-right: 16px;
+  color: rgba(150, 1, 33, 0.877);
+}
+.input.switch > label .switch-label-checked {
+  grid-area: checked;
+  margin-left: 16px;
+  color: rgba(4, 102, 4, 0.877);
+}
+.input.switch > label input[type=checkbox] {
+  grid-area: switch;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  opacity: 1;
+  height: 8px;
+  width: 64px;
+  border-radius: 16px;
+  cursor: pointer;
+  background-color: #ae1100;
+}
+.input.switch > label input[type=checkbox]:checked {
+  background-color: #999999;
+}
+.input.switch > label input[type=checkbox]::before {
+  content: "";
+  position: absolute;
+  line-height: 0;
+  width: 27px;
+  height: 27px;
+  margin: 0;
+  border-radius: 50%;
+  font-size: 16px;
+  box-shadow: inset 5px 5px 10px #fff, inset -5px -5px 10px #babecc;
+  background-color: #ebecf0;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-100%);
+}
+.input.switch > label input[type=checkbox]:checked::before {
+  transform: translateX(100%);
+}
+.input.text, .input.password {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.input.text > span, .input.password > span {
+  color: #61677c;
+  position: absolute;
+  top: 16px;
+  margin-left: 16px;
+}
+.input.text input[type=text] ~ span,
+.input.text input[type=password] ~ span, .input.password input[type=text] ~ span,
+.input.password input[type=password] ~ span {
+  transition: all 0.3s ease-in-out;
+}
+.input.text input[type=text]:focus ~ span,
+.input.text input[type=password]:focus ~ span,
+.input.text input[type=text]:not(:placeholder-shown) ~ span,
+.input.text input[type=password]:not(:placeholder-shown) ~ span, .input.password input[type=text]:focus ~ span,
+.input.password input[type=password]:focus ~ span,
+.input.password input[type=text]:not(:placeholder-shown) ~ span,
+.input.password input[type=password]:not(:placeholder-shown) ~ span {
+  transform: translateY(-2rem);
+  background-color: #ebecf0;
+}
+.input.checkbox, .input.radio {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.input.checkbox label, .input.radio label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.input.checkbox input[type=checkbox],
+.input.checkbox input[type=radio], .input.radio input[type=checkbox],
+.input.radio input[type=radio] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  opacity: 1;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+.input.checkbox input[type=checkbox]::before,
+.input.checkbox input[type=radio]::before, .input.radio input[type=checkbox]::before,
+.input.radio input[type=radio]::before {
+  position: absolute;
+  content: "";
+  line-height: 0;
+  width: 16px;
+  height: 16px;
+  margin: 0 8px;
+  font-size: 16px;
+  box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babecc;
+  transition: all 0.2s ease-in-out;
+}
+.input.checkbox input[type=checkbox]:checked::before,
+.input.checkbox input[type=radio]:checked::before, .input.radio input[type=checkbox]:checked::before,
+.input.radio input[type=radio]:checked::before {
+  content: "";
+  position: absolute;
+  background-color: #999999;
+}
+.input.checkbox .checkbox-title {
+  text-align: left;
+  padding-right: 16px;
+  paddingtop: 8px;
+  width: 100%;
+}
+.input.checkbox .input-checkbox-group {
+  width: 100%;
+}
+.input.checkbox input[type=checkbox] {
+  border-radius: 10%;
+}
+.input.checkbox:check::before {
+  border-radius: 10%;
+}
+.input.radio .radio-title {
+  text-align: left;
+  padding-right: 16px;
+  padding-top: 8px;
+  width: 100%;
+}
+.input.radio .input-radio-group {
+  display: flex;
+  width: 100%;
+}
+.input.radio input[type=radio] {
+  border-radius: 50%;
+}
+.input.radio input[type=radio]::before {
+  border-radius: 50%;
+}
+
+.card {
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+}
+.card p {
+  margin: 0;
+  line-height: 2rem;
+}
+.card .title {
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: -16px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+#form-body-radio {
+  margin-top: 2rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
