@@ -1,6 +1,12 @@
 import React from 'react';
 
-const mapStyles = ['streets-v11', 'light-v10', 'dark-v10', 'outdoors-v11', 'satellite-v9'];
+const mapStyles = [
+  { id: 'streets-v11', name: 'Streets' },
+  { id: 'light-v10', name: 'Light' },
+  { id: 'dark-v10', name: 'Dark' },
+  { id: 'outdoors-v11', name: 'Outdoors' },
+  { id: 'satellite-v9', name: 'Satellite' },
+];
 
 const ThemeSelect = ({ setTheme }) => {
   return (
@@ -9,15 +15,15 @@ const ThemeSelect = ({ setTheme }) => {
       <div className='input radio'>
         <div className='input-radio-group'>
           {mapStyles.map((item) => (
-            <label key={item}>
+            <label key={item.id}>
               <input
                 type='radio'
                 name='theme'
-                value={item}
+                value={item.id}
                 onChange={(e) => setTheme(e.target.value)}
-                defaultChecked={item === 'streets-v11'}
+                defaultChecked={item.id === 'streets-v11'}
               />
-              <span>{item}</span>
+              <span>{item.name}</span>
             </label>
           ))}
         </div>
