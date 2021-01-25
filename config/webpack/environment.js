@@ -1,1 +1,0 @@
-environment.loaders.delete('nodeModules');
