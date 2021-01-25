@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import fetchWeather from '../api/fetchWeather';
-import ReactMapGL, { Marker, NavigationControl, LinearInterpolator } from 'react-map-gl';
-import mapboxgl from 'mapbox-gl'; // This is a dependency of react-map-gl even if you didn't explicitly install it
-
-// eslint-disable-next-line import/no-webpack-loader-syntax
-mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+import ReactMapGL, { Marker, LinearInterpolator } from 'react-map-gl';
 
 const mapAPIKey = 'pk.eyJ1IjoiYmloYW5jIiwiYSI6ImNrazlmamhsMzAydDMyd254aWZ2dTYwaWIifQ.LqqynIf2WmW-2BFGZrnMnw';
 
